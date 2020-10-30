@@ -1,0 +1,29 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["plugin:react/recommended", "google"],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": ["react"],
+    "rules": {
+        "indent": ["error", 4],
+        "comma-dangle": [
+            "error",
+            {
+                // "arrays": "never",
+                // "objects": "never",
+                // "imports": "never",
+                // "exports": "never",
+                "functions": "never"
+            }
+        ],
+        "quotes": [2, "double", "avoid-escape"]
+    }
+}
