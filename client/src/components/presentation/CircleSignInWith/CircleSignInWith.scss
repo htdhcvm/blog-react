@@ -1,0 +1,39 @@
+.CircleSignInWith {
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #d3d0cb;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    transition-property: all;
+    transition-duration: 0.2s;
+    .MuiSvgIcon-root {
+        font-size: 32px;
+        color: #d3d0cb;
+    }
+}
+.Circle {
+    .twitter:hover {
+        border: 1px solid #31a0d0;
+        .MuiSvgIcon-root {
+            color: #33b4ef;
+        }
+    }
+
+    .facebook:hover {
+        border: 1px solid #3b4f77;
+        .MuiSvgIcon-root {
+            color: #4f6aa3;
+        }
+    }
+
+    .google:hover {
+        border: 1px solid #cb413c;
+        .MuiSvgIcon-root {
+            color: #f5544c;
+        }
+    }
+}

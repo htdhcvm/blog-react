@@ -1,0 +1,63 @@
+.Button {
+    transition-property: all;
+    transition-duration: 0.2s;
+    .facebook {
+        .icon {
+            background-color: #243b68;
+        }
+
+        .text {
+            background-color: #3a5998;
+            color: white;
+        }
+    }
+    .twitter {
+        .icon {
+            background-color: #0a95cb;
+        }
+
+        .text {
+            background-color: #06abed;
+            color: white;
+        }
+    }
+
+    .google {
+        .icon {
+            background-color: #c52d23;
+        }
+
+        .text {
+            background-color: #f44235;
+            color: white;
+        }
+    }
+}
+
+.ButtonSignInWith {
+    display: flex;
+    min-height: 40px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.9;
+    &:hover {
+        opacity: 1;
+    }
+
+    .MuiSvgIcon-root {
+        color: white;
+    }
+    .icon {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+    .text {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        justify-content: center;
+    }
+}

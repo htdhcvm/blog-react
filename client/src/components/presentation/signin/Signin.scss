@@ -1,0 +1,146 @@
+.signin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .image {
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            height: 100vh;
+            display: block;
+        }
+    }
+
+    .form {
+        padding: 40px 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h2 {
+            text-align: center;
+        }
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .active {
+            .icon {
+                border-top: 1px solid #4686ff !important;
+                border-left: 1px solid #4686ff !important;
+                border-bottom: 1px solid #4686ff !important;
+                .MuiSvgIcon-root {
+                    color: #4686ff !important;
+                }
+            }
+            .login {
+                border: 1px solid #4686ff !important;
+                &::placeholder {
+                    color: #4686ff !important;
+                }
+            }
+
+            .input-wrapper {
+                border: 1px solid #4686ff !important;
+                input::placeholder {
+                    color: #4686ff !important;
+                }
+                .MuiSvgIcon-root {
+                    color: #4686ff !important;
+                }
+            }
+        }
+        .form-group {
+            .MuiSvgIcon-root {
+                color: #d3d0cb;
+            }
+            display: flex;
+            margin-bottom: 20px;
+            height: 45px;
+            input {
+                outline: none;
+                padding-left: 10px;
+                font-size: 14px;
+                color: #7f7f7f;
+            }
+            input::placeholder {
+                color: #7f7f7f;
+            }
+            .input-wrapper {
+                border: 1px solid #d3d0cb;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                input {
+                    border: none;
+                    width: 100%;
+                    height: 95%;
+                }
+                .MuiSvgIcon-root {
+                    padding-right: 10px;
+                    cursor: pointer;
+                }
+            }
+            .icon {
+                padding: 8px;
+                display: flex;
+                align-items: center;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                border-top: 1px solid #d3d0cb;
+                border-left: 1px solid #d3d0cb;
+                border-bottom: 1px solid #d3d0cb;
+            }
+            .login {
+                flex: 1;
+                border: 1px solid #d3d0cb;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+        }
+        .devider {
+            margin: 40px 0px;
+            display: flex;
+            align-items: center;
+            span {
+                padding: 0px 20px;
+                color: #c4c1c4;
+            }
+            .line {
+                border: 1px solid #f8f7f7;
+                width: 100%;
+            }
+        }
+        .btnlogin {
+            border: none;
+            color: white;
+            background-color: #4686ff;
+            border-radius: 5px;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 25px;
+            margin-right: 10px;
+            &:hover {
+                background-color: #1876f2;
+            }
+        }
+        .manipulation {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+            }
+            .register {
+                color: #0a95cb;
+            }
+            .forgot {
+                color: #d3d0cb;
+            }
+        }
+    }
+}

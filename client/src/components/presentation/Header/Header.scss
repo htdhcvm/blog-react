@@ -1,0 +1,44 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+        margin-right: 40px;
+    }
+    .search {
+        flex: 1;
+        display: flex;
+        padding: 0px 20px;
+        border: 1px solid #d3d0cb;
+        border-radius: 4px;
+        height: 40px;
+        align-items: center;
+        .MuiSvgIcon-root {
+            cursor: pointer;
+        }
+        input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding-left: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+    .info {
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+        .userData{
+            margin: 0px 10px;
+            display: flex;
+            align-items: center;
+            span {
+                margin-right: 5px;
+            }
+        }
+        .logout {
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.write-post {
+    padding: 1% 5%;
+    form {
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .form-group {
+            width: 100%;
+            margin-bottom: 20px;
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                height: 40px;
+                padding: 20px;
+            }
+
+            textarea {
+                width: 100%;
+                height: 400px;
+                box-sizing: border-box;
+                padding: 20px;
+            }
+        }
+    }
+}
