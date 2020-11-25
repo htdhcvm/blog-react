@@ -1,3 +1,10 @@
 .PostOnId {
-    padding: 1% 5%;
+    .back {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .form-change {
+        margin: 40px 0px 40px 0px;
+    } 
 }

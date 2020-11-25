@@ -6,10 +6,10 @@ passport.serializeUser((user, done) => {
 });
 
 passport.deserializeUser(async (id, done) => {
-
     const findUser = await userModel.findUser(id);
     if (findUser === null) return done(null, findUser);
     return done(null, {
+        id : findUser._id,
         name: findUser.name,
         photo: findUser.photo,
         id_Service: findUser.id_Service,

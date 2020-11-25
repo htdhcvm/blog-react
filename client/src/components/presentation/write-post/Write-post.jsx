@@ -32,7 +32,7 @@ const Writepost = () => {
     };
 
     return (
-        <div className='write-post'>
+        <div className='write-post Page'>
             <Header />
             <form ref={formAddPost} onSubmit={addPostForm}>
                 <div className='form-group'>

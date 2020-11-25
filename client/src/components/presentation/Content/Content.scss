@@ -2,6 +2,10 @@
     margin-top: 1%;
 }
 
+.listPosts {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 ul {
     margin: 0px;
@@ -13,7 +17,7 @@ li {
     list-style: none;
     display: inline;
     padding: 10px;
-    a{
+    a {
         text-decoration: none;
     }
 }
