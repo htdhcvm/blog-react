@@ -50,9 +50,9 @@ const App = () => {
                     <Private path='/post/:id'>
                         <PostOnId />
                     </Private>
-                    <Route path='/sign-up'>
+                    <AuthRouter path='/sign-up'>
                         <Signup />
-                    </Route>
+                    </AuthRouter>
                     <Route path='/forgot-password'>
                         <ForgorPassword />
                     </Route>

@@ -10,6 +10,7 @@ const FormGroup = React.memo(
         toggleActiveLogin,
         toggleActivePassword,
         passwordVisible,
+        refOn, 
         children,
     }) => {
         useEffect(() => {
@@ -29,12 +30,14 @@ const FormGroup = React.memo(
                         onBlur={() => toggleActiveLogin()}
                         className='login'
                         type='text'
+                        ref={refOn}
                         placeholder='Username or email'
                     />
                 ) : (
                     <div className='input-wrapper'>
                         <input
                             name="password"
+                            ref={refOn}
                             type={passwordVisible ? 'text' : 'password'}
                             placeholder='Password'
                             onFocus={toggleActivePassword}

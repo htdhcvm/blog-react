@@ -27,10 +27,17 @@ import './Signin.scss';
 
 import { useDispatch } from 'react-redux';
 
-import { userSignIn, withGoogle, withFacebook } from '@features/user/userSlice.js';
+import {
+    userSignIn,
+    withGoogle,
+    withFacebook,
+} from '@features/user/userSlice.js';
 
 const Signin = () => {
     const dispatch = useDispatch();
+
+    const login = useRef('');
+    const passrod = useRef('');
 
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [activeLogin, setActiveLogin] = useState(false);
@@ -60,7 +67,6 @@ const Signin = () => {
     const refCheckbox = useRef('');
 
     const signIn = () => {
-        console.log('Sign in');
         let form = new FormData(refFormSignIn.current);
 
         let user = {
@@ -69,22 +75,22 @@ const Signin = () => {
             check: isChecked,
         };
 
-        if (
-            (user.login.length > 0) &
-            (user.password.length > 0) &
-            (user.check === true)
-        ) {
-            dispatch(userSignIn(user))
+        if ((user.login.length > 0) & (user.password.length > 0)) {
+            console.log('Click');
+            dispatch(userSignIn(user));
         }
+
+        login.current.value = '';
+        passrod.current.value = '';
     };
 
     const signInWithFaceBook = () => {
         console.log('Sign in with FaceBook');
-        dispatch(withFacebook())
+        dispatch(withFacebook());
     };
 
     const signInWithGoogle = () => {
-        dispatch(withGoogle())
+        dispatch(withGoogle());
     };
 
     const visibleIcon = useMemo(
@@ -105,6 +111,7 @@ const Signin = () => {
                         name={activeLogin === true ? 'active first' : ''}
                         Icon={AccountCircleIcon}
                         type='login'
+                        refOn={login}
                         toggleActiveLogin={toggleActiveLogin}
                     ></FormGroup>
 
@@ -112,6 +119,7 @@ const Signin = () => {
                         name={activePassword === true ? 'active Two' : ''}
                         Icon={VpnKeyIcon}
                         type='password'
+                        refOn={passrod}
                         toggleActivePassword={toggleActivePassword}
                         passwordVisible={passwordVisible}
                     >

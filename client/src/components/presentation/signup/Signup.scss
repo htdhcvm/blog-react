@@ -16,7 +16,12 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
+        .errorMessage {
+            color: #f44336;
+            font-size: 16px;
+            line-height: 2.66;
+            letter-spacing: 0.03em;
+        }
         form {
             display: flex;
             flex-direction: column;
@@ -95,6 +100,7 @@
             color: white;
             border-radius: 5px;
             padding: 10px 0px;
+            cursor: pointer;
         }
     }
 }

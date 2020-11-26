@@ -13,7 +13,7 @@ export const addPost = createAsyncThunk("posts/addPost", ({ title, text }) =>
 )
 
 export const getPosts = createAsyncThunk("posts/getPosts", () =>
-    fetch("http://localhost:3001/blog/post/getPosts", {
+    fetch("http://localhost:3001/blog/post/getAllPosts", {
         method: "GET"
     })
         .then(response => response.json())
@@ -42,7 +42,7 @@ export const deletePost = createAsyncThunk("post/deletePost", (id) =>
 )
 
 export const getAllPostOnUser = createAsyncThunk("post/getAllPostOnUser", () =>
-    fetch(`http://localhost:3001/blog/post/getAllPosts`, {
+    fetch(`http://localhost:3001/blog/post/getAllPostsOnUser`, {
         method: "GET",
         credentials: "include"
     })
@@ -57,7 +57,7 @@ export const updatePost = createAsyncThunk("post/updatePost", ({ idPost, title, 
         },
         body: JSON.stringify({ title, text })
     })
-        .then( r => r.json())
+        .then(r => r.json())
 )
 
 const postsSlice = createSlice({
